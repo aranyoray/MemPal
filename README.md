@@ -12,7 +12,7 @@ Its first job is to help people who have memory problems, like dementia or Alzhe
 
 Its second job is a game called Brain Check. This game quietly watches how a person plays. It looks for tiny clues that can show if their memory and thinking are changing over time.
 
-The box makes its own WiFi network. It also runs its own website, right from the device. Any family member can join the WiFi on their phone and open the website. From there, they can add photos, set reminders, play Brain Check, and look at the results. You don't need to download an app. You don't need the internet or a monthly fee.
+The box makes its own WiFi network. It also runs its own website, right from the device. Any family member can join the WiFi on their phone and open the website. From there, they can add photos, set reminders, play Brain Check, and look at the results. You don't need to download an app, and you don't need the internet. Anyone in the family can help out, right from their own phone.
 
 ## 2. Why We Are Building This
 
@@ -22,11 +22,15 @@ Dementia usually starts after age 65. After that, the chance of getting it doubl
 
 Here is some hopeful news. A big report from 2020 said that up to 40% of dementia cases around the world might be prevented or slowed down (Livingston et al., 2020). How? By taking care of things like hearing loss, high blood pressure, feeling lonely, not moving enough, and feeling sad for a long time. In 2024, the same group raised that number to almost 45%. They added two more things to watch: high cholesterol and vision loss.
 
+This is the heart of why MemPal matters. If we can spot brain changes early, we have a real chance to help.
+
 ### 2.2 Catching It Too Late
 
 Right now, doctors test for dementia with paper tests like the MoCA or MMSE. These tests have problems. They can be unfair to people from different cultures. They only show one moment in time. And doctors usually give them only after someone already thinks something is wrong. By then, the brain may have already changed a lot.
 
 New research shows a better way. The way a person touches a screen can give tiny clues. These clues are called "digital biomarkers." (A biomarker is a sign in your body that tells you about your health. A digital one comes from how you use a device.) These clues can show brain changes years before the usual signs appear. In some tests, games could spot early memory trouble (called mild cognitive impairment, or MCI) almost as well as a blood test. A 2025 study from Rutgers found that games about figuring out rules can spot brain changes with great accuracy.
+
+Catching trouble years earlier means families get more time. More time to plan, to get help, and to slow things down.
 
 ### 2.3 The Link Between ADHD and Dementia
 
@@ -40,7 +44,7 @@ The best proof for brain games comes from a 20-year study by the NIH, shared in 
 
 ## 3. Our Goals
 
-We want the MemPal Box to:
+The MemPal Box is about more than memory. It is about keeping people close to the ones they love, and catching brain changes early enough to make a difference. Here is what we want it to do:
 
 - Help people remember the names and faces of the people they love.
 - Play reminders using real family voices, not a robot voice.
@@ -48,7 +52,7 @@ We want the MemPal Box to:
 - Include a fun game that quietly checks how the brain is doing.
 - Track changes over time so families and doctors can spot early warning signs.
 - Let caregivers run everything from a website on any phone or laptop.
-- Be cheap and easy to build, so it could be used in care homes or given to families.
+- Be simple to build and easy to share, so it can reach care homes and families everywhere.
 
 ## 4. How It Works
 
@@ -56,7 +60,7 @@ We want the MemPal Box to:
 
 **Photo Mode**
 
-The small screen shows family photos saved on a memory card. Each photo has big, clear words that say who the person is. For example: "This is Sarah — your granddaughter." A big green button lets the person move to the next photo whenever they want.
+The small screen shows family photos saved on a memory card. Each photo has big, clear words that say who the person is. For example: "This is Sarah — your granddaughter." A big green button lets the person move to the next photo whenever they want. This keeps loved ones present, even on hard days.
 
 **Reminder Mode**
 
@@ -64,7 +68,7 @@ At times the caregiver picks, the box plays a reminder out loud through the spea
 
 **Help Button**
 
-A big red button plays a calming message when pressed. At the same time, it sends an alert to the website. The caregiver sees the time it happened and can tap to say they got it.
+A big red button plays a calming message when pressed. At the same time, it sends an alert to the website. The caregiver sees the time it happened and can tap to say they got it. This gives the patient a simple way to reach out, and gives the family peace of mind.
 
 ### 4.2 Brain Check: The Thinking Game
 
@@ -123,30 +127,27 @@ The ESP32 (the little computer brain of the box) makes its own WiFi network. The
 - **Help Alerts** — see a live list of help button presses, with times.
 - **Settings** — change the WiFi name and password, speaker volume, slideshow speed, and screen brightness.
 
-## 6. Parts List and Cost
+## 6. What's Inside the Box
 
-This table lists every part you need, with prices and other choices. The whole thing costs about $29 to $49, depending on where you shop. The Brain Check game needs no extra parts. It runs on the caregiver's phone through the website.
+The MemPal Box is built from simple, common parts. None of them are hard to find, so almost anyone can build a box and share it with a family that needs one. The Brain Check game needs no extra parts at all. It runs on the caregiver's phone through the website.
 
-**Shopping tip:** An ESP32 starter kit from Amazon ($15–20) usually comes with the board, breadboard, wires, and resistors. Special parts like the DFPlayer and arcade buttons can be cheaper on AliExpress, but they take 2–4 weeks to ship.
-
-| Part | Price | Where to Buy | Other Choices |
-|------|-------|--------------|---------------|
-| ESP32 DevKitC (WROOM-32) — the main brain | $6–10 | Amazon, AliExpress | ESP32-S3 ($8–12) or ESP32-C3 ($4–6) |
-| 2.4″ ILI9341 TFT LCD (SPI) — the screen | $6–9 | Amazon, AliExpress | 1.8″ ST7735 ($3–5) or 2.8″ touch ($9–12) |
-| DFPlayer Mini MP3 Module — plays sound | $3–5 | Amazon, DFRobot | MAX98357A I2S DAC ($4–6) |
-| 8Ω 2W Small Speaker | $1–3 | Amazon | 8Ω 0.5W mini ($0.50–1) |
-| DS3231 RTC Module — keeps the time | $2–3 | Amazon, AliExpress | DS1307 ($1–2) or NTP via WiFi (free) |
-| MicroSD Card (8–16 GB) — stores files | $3–5 | Any store | ESP32 SPIFFS (~4 MB, free, limited) |
-| 3× Large Arcade Buttons | $3–6 | Amazon, AliExpress | Tactile buttons ($1–2) or capacitive touch ($2–4) |
-| Breadboard (830-point) — for wiring | $2–4 | Amazon | Perfboard + headers ($2–3, needs soldering) |
-| Jumper Wire Kit (M-M, M-F) | $2–3 | Amazon | — |
-| 1 kΩ Resistors (5-pack) | $0.50–1 | Amazon | — |
-| USB-C Cable + 5 V Adapter — for power | $0 (reuse) | Already own | 18650 battery + TP4056 ($3–5) |
-| Enclosure (shoebox / craft box) — the case | $0–5 | Craft store / recycled | 3D-printed case ($2–5 filament) |
+| Part | What It Does for the User |
+|------|---------------------------|
+| ESP32 (WROOM-32) | The main brain. It runs everything and makes the WiFi network. |
+| 2.4″ TFT LCD screen | Shows the family photos and the names written on them. |
+| DFPlayer Mini MP3 module | Plays the recorded family voices and reminders. |
+| Small 8Ω speaker | Lets the patient hear the voices clearly. |
+| DS3231 clock module | Keeps time so reminders play at the right moment. |
+| MicroSD card | Stores the photos, voice clips, and game results. |
+| 3 large arcade buttons | Big, easy-to-press buttons for "next photo" and "help." |
+| Breadboard and jumper wires | Hold all the parts together, with no soldering needed. |
+| Resistors | Keep the buttons working safely. |
+| USB power adapter | Powers the box from any wall outlet. |
+| Enclosure (a craft box or case) | Holds everything and makes it friendly to keep by the bed. |
 
 ## 7. The Software
 
-All the software is free, and anyone can use it. The project has three parts: the code inside the box (called firmware), the caregiver website, and the Brain Check game. The Brain Check game adds no cost. It is just code sent from the same website.
+All the software is open and free for anyone to use, study, and improve. The project has three parts: the code inside the box (called firmware), the caregiver website, and the Brain Check game. The Brain Check game needs nothing extra. It is just code sent from the same website.
 
 | Part | Built With | Tools | What It Does |
 |------|-----------|-------|--------------|
@@ -172,7 +173,7 @@ The project is planned for 25 days (about 3.5 weeks). The plan assumes 1–2 hou
 
 | Phase | Days | Hours | Main Tasks |
 |-------|------|-------|------------|
-| 1. Planning & Ordering Parts | 1–3 | 2–3 hrs | Finish the parts list; order parts; set up the Arduino software; format the SD card; collect family photos; record voice reminders |
+| 1. Planning & Gathering Parts | 1–3 | 2–3 hrs | Finish the parts list; gather the parts; set up the Arduino software; format the SD card; collect family photos; record voice reminders |
 | 2. Building the Hardware | 4–7 | 4–6 hrs | Wire the ESP32 to the screen, sound module, clock, and buttons; put in the SD card; test each part |
 | 3. ESP32 Code | 8–11 | 5–8 hrs | Set up WiFi; serve the website; build the data system; add the screen, sound, and clock; program reminders; add data saving for Brain Check |
 | 4. Caregiver Website | 12–14 | 4–5 hrs | Build the website: photo manager, reminder scheduler, activity log, help alerts, and settings |
@@ -196,7 +197,7 @@ This project helps you build real skills in many areas:
 
 ## 10. Ideas for Later
 
-If there is extra time and money, we could add:
+If there is extra time, we could add:
 
 - Phone alerts to the caregiver when the help button is pressed
 - A sensor that starts the slideshow when the patient walks up to the box
