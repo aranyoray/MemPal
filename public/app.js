@@ -1354,3 +1354,9 @@ window.addEventListener("hashchange", () => {
   render();
 });
 init();
+
+// Keep the skip link from being interpreted as an application route.
+document.querySelector(".skip-link").addEventListener("click", (event) => {
+  event.preventDefault();
+  document.querySelector("#main").focus();
+});
