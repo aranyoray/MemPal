@@ -1,0 +1,16 @@
+{
+  "name": "mempal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check public/app.js && node --check public/memorie-color.js && node --check public/memorie-color-engine.js && node --check public/memorie-color-state.js",
+    "test": "node --test tests/state.test.js && playwright test",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "prettier": "3.9.9"
+  }
+}

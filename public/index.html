@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MemPal · Your everyday memory companion</title>
+    <meta
+      name="description"
+      content="Memorie-Color photo coloring, familiar voice reminders and gentle brain practice in one local-first caregiver dashboard."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%231c5250'/%3E%3Cpath d='M7 22V10l9 8 9-8v12' fill='none' stroke='%23fff' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/memorie-color.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="#home"
+        ><span class="brandmark">m</span> MemPal<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <p class="eyebrow">A LITTLE HELP, EVERY DAY</p>
+      <nav id="nav"></nav>
+      <div class="side-bottom">
+        <span class="local-icon">◈</span
+        ><strong>Your memories stay here</strong>
+        <p>Photos and activity are saved in this browser on this device.</p>
+        <span class="device-label">Browser companion</span>
+      </div>
+    </aside>
+    <div class="shell">
+      <header>
+        <div class="breadcrumb">
+          Your care space <span>/</span>
+          <strong id="page-label">Overview</strong>
+        </div>
+        <div class="header-right">
+          <span id="clock"></span
+          ><button
+            class="avatar"
+            id="profile-button"
+            title="Open settings"
+            aria-label="Open settings"
+          >
+            MP
+          </button>
+        </div>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer>
+        Made for familiar faces and everyday moments.
+        <span>MemPal · Browser edition</span>
+      </footer>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"></dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
